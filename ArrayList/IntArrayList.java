@@ -1,3 +1,5 @@
+package ArrayList;
+
 public class IntArrayList {
     private static final int InitialCapacity = 20;
     private int size = 0;
@@ -17,11 +19,11 @@ public class IntArrayList {
 
     }
 
-    public boolean contains(int element) {
+    public boolean containsElement(int element) {
         for (int i = 0; i < Data.length; i++) {
-            if(element == Data[i])
-            return true;
-            
+            if (element == Data[i])
+                return true;
+
         }
 
         return false;
@@ -54,24 +56,28 @@ public class IntArrayList {
 
     }
 
-    public int getSize() {
-        return Data[size];
+    public void getSize() {
+        System.out.print("Size = " + size);
     }
 
     public void display() {
-        for (int i = 0; i < size; i++) {
-            System.out.print(Data[i] + " ");
+        System.out.print("[");
+        System.out.print(Data[0]);
+        for (int i = 0; i < size - 1; i++) {
+            System.out.print(", " + Data[i + 1]);
+
         }
+        System.out.print("]");
     }
 
+    // [12, 443, 66]
     public static void main(String[] args) {
         IntArrayList list = new IntArrayList();
-        list.addElement(5);
-        list.addElement(9);
-        list.addElement(10);
-        list.deleleElement(2);
+        list.addElement(12);
+        list.addElement(443);
+        list.addElement(66);
+        list.addElement(67);
         list.display();
-        
 
     }
 
