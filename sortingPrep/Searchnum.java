@@ -1,22 +1,24 @@
-public class Searchnum {
+package sortingPrep;
 
-    public static int findNum(int[] arr, int num)
+class Searchnum {
+
+    public static boolean findNum(int[] arr, int num)
     {
         for (int i = 0; i < arr.length; i++) {
             if(num == arr[i]){
-                return i;
+                return true;
             }
         }
-        return -1;
+        return false;
     }
 
     public static void main(String[] args) {
         int[] arr = {23, 14, 20, 89, -65};
-        int num = 100;
+        int num = 23;
         for (int i = 0; i < arr.length; i++) {
           
         }
-        System.out.println(findNum(arr, num));
+        findNum(arr, num);
        
     }
 

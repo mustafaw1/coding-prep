@@ -9,8 +9,6 @@ public class Isdigit2 {
                 String s = Character.toString(c);
                 int num = Integer.parseInt(s);
                  result.append(num);
-             
-
             }
         }
         return result.toString();
