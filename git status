@@ -1,0 +1,29 @@
+[33mcommit 8f8d79035dde6340c479d64491eb567fd78aaa00[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: mustafaw1 <mustafazaidi840@gmail.com>
+Date:   Wed Jul 20 02:38:06 2022 +0500
+
+    Todays work added
+
+[33mcommit 7ac22f6bef7c7781352c9c94a0e184011f4f559e[m
+Author: mustafaw1 <mustafazaidi840@gmail.com>
+Date:   Wed Jul 20 02:20:38 2022 +0500
+
+    Create settings.json
+
+[33mcommit ab8808a22b94416e4104ee5a118441942f51ce92[m
+Author: mustafaw1 <mustafazaidi840@gmail.com>
+Date:   Tue Jul 19 16:23:17 2022 +0500
+
+    Array custom class created
+
+[33mcommit dbeaef2f5413dfd85af2bb6668f9a33d4c00b778[m
+Author: mustafaw1 <mustafazaidi840@gmail.com>
+Date:   Mon Jul 18 22:54:06 2022 +0500
+
+    Refactor char array name
+
+[33mcommit 4e84a24b94ab4d9ef562beea2cfe928d5331c64d[m
+Author: unknown <mustafazaidi840@gmail.com>
+Date:   Mon Jul 18 19:32:53 2022 +0500
+
+    added arraylist element

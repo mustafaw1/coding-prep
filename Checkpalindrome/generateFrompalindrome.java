@@ -1,3 +1,5 @@
+package Checkpalindrome;
+
 public class generateFrompalindrome {
     public static Boolean checkGenfromPalindrome(String str) {
         int MAX_CHAR = 256;

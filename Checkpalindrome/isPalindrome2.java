@@ -1,3 +1,5 @@
+package Checkpalindrome;
+
 public class isPalindrome2 {
     public static boolean checkPalindrome(String str)
     {
@@ -11,7 +13,7 @@ public class isPalindrome2 {
 
     }
     public static void main(String[] args) {
-        String str = "malayalam";
+        String str = "mlayalm";
         System.out.print(checkPalindrome(str));
     }
 }

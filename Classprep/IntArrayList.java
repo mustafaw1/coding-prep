@@ -1,4 +1,4 @@
-package ArrayList;
+package Classprep;
 
 public class IntArrayList {
     private static final int InitialCapacity = 20;
@@ -38,9 +38,9 @@ public class IntArrayList {
         for (int i = index; i < size - 1; i++) {
             Data[i] = Data[i + 1];
         }
-        size--;
+         size--;
 
-        return removedElement;
+         return removedElement;
 
     }
 
@@ -77,6 +77,7 @@ public class IntArrayList {
         list.addElement(443);
         list.addElement(66);
         list.addElement(67);
+        list.deleleElement(3);
         list.display();
 
     }

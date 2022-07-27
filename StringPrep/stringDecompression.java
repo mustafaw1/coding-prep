@@ -10,7 +10,7 @@ public class stringDecompression {
         while (index < str.length()) {
             num = 0;
             char c = str.charAt(index);
-            if (!Character.isDigit(c)) {
+            if (Character.isAlphabetic(c)) {
                 nextchar = c;
                 index++;
             }
@@ -18,6 +18,7 @@ public class stringDecompression {
                 int temp = Integer.parseInt("" + c);
                 num = (num * 10) + temp;
                 index++;
+                
                 if (index >= str.length())
                     break;
                 c = str.charAt(index);

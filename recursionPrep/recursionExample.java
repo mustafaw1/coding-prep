@@ -1,16 +1,17 @@
+package recursionPrep;
+
 public class recursionExample {
-    public static void printRecursive(int[] arr, int i){
-        int len = arr.length;
-        if(i == len)
-         return;
-        System.out.println(arr[i]);
-        printRecursive(arr, i+1);
-        
-        
+    public static void printRecursive(int i, int[] arr) {
+        if (i == arr.length)
+            return;
+        // if (arr.length == )
+        printRecursive(i + 1, arr);
+        System.out.print(arr[i] + " ");
     }
+
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9,10};
-        printRecursive(arr, 0);
-        
+        int[] arr = { 1, 2, 3, 4, 5};
+        printRecursive(0, arr);
+
     }
 }

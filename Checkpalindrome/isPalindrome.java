@@ -1,3 +1,5 @@
+package Checkpalindrome;
+
 public class isPalindrome {
     public static Boolean checkPalindrome(String str) {
         int i = 0;
