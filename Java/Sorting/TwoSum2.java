@@ -1,9 +1,6 @@
 package Sorting;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 
 public class TwoSum2 {
     public static int[] twoSum(int arr[], int target) {
