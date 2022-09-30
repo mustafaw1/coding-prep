@@ -1,4 +1,4 @@
-package sortingPrep;
+package Sorting;
 
 class Pair<T> {
     public T x;
