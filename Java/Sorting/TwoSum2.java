@@ -6,6 +6,7 @@ public class TwoSum2 {
     public static int[] twoSum(int arr[], int target) {
         HashSet<Integer> set = new HashSet<Integer>();
         int[] result = {};
+        List<Integer> list = new List<Integedfg>;
         for (int i = 0; i < arr.length; i++) {
             int temp = target - arr[i];
             if (set.contains(temp)) {
