@@ -2,9 +2,7 @@ package Sorting;
 import java.util.Arrays;
 import java.util.HashSet;
 
-import javax.swing.plaf.ListUI;
-
-public class TwoSum2 {
+public class TwoSumLinear {
     public static int[] twoSum(int arr[], int target) {
         HashSet<Integer> set = new HashSet<Integer>();
         int[] result = {};
