@@ -14,7 +14,6 @@ public class TwoSumLinear {
                 result[1] = temp;
 
             }
-
             set.add(arr[i]);
 
         }

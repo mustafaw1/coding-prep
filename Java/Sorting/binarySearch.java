@@ -1,6 +1,4 @@
-package sortingPrep;
-
-
+package Sorting;
 
 public class binarySearch {
     public static int binaryS(int[] arr, int num) {
