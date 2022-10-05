@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Issort2 {
+public class SortUsingFunctions {
     public static int totalcount = 0;
     public static void main(String[] args) {
         for (int numElement = 10; numElement <= 150; numElement+=10) {

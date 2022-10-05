@@ -1,4 +1,4 @@
-package StringPrep;
+package String;
 
 public class StringtoInt {
     public static int stringtoInt(String str){

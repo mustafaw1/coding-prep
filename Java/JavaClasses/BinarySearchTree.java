@@ -1,4 +1,4 @@
-package Classprep;
+package JavaClasses;
 
 import java.util.ArrayList;
 

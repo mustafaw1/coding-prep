@@ -1,4 +1,4 @@
-package StringPrep;
+package String;
 
 public class count {
     public static void countChar(String str) {

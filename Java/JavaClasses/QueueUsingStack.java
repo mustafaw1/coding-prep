@@ -1,13 +1,13 @@
-package Classprep;
+package JavaClasses;
 
 public class QueueUsingStack {
-    private Classprep.Stack inputStack;
-    private Classprep.Stack OutputStack;
+    private JavaClasses.Stack inputStack;
+    private JavaClasses.Stack OutputStack;
     private int size;
 
     public QueueUsingStack() {
-        inputStack = new Classprep.Stack(5);
-        OutputStack = new Classprep.Stack(5);
+        inputStack = new JavaClasses.Stack(5);
+        OutputStack = new JavaClasses.Stack(5);
     }
 
     public void enqueue(int i) {

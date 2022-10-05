@@ -1,13 +1,13 @@
-package Classprep;
+package JavaClasses;
 
 public class StackUsingQueue {
-    private Classprep.Queue inputQueue;
-    private Classprep.Queue outputQueue;
+    private JavaClasses.Queue inputQueue;
+    private JavaClasses.Queue outputQueue;
     private int size;
 
     public StackUsingQueue() {
-        inputQueue = new Classprep.Queue(6);
-        outputQueue = new Classprep.Queue(6);
+        inputQueue = new JavaClasses.Queue(6);
+        outputQueue = new JavaClasses.Queue(6);
     }
 
     public void push(int i) {

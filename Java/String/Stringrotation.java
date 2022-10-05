@@ -1,9 +1,10 @@
-package StringPrep;
+package String;
 
 public class Stringrotation {
 
     public static boolean isSubstring(String s1, String s2) {
-       return s1.contains(s2);
+        String s3 = s1 + s1;
+       return s3.contains(s2);
     }
 
     public static boolean isRotation(String s1, String s2) {
@@ -29,9 +30,9 @@ public class Stringrotation {
 
     public static void main(String[] args) {
         String s1 = "waterbottle";
-        String s2 = "ottlewaterb";
+        String s2 = "terbattlew";
        
-        System.out.print(isRotation(s1, s2));
+        System.out.print(isSubstring(s1, s2));
         
     }
 }
