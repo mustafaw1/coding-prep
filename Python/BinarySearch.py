@@ -1,6 +1,6 @@
-def binarySearch(arr, left, right, num):
-    while (left <= right):
-        mid = left + right//2
+def binary_search(arr, left, right, num):
+    while left <= right:
+        mid = int((left + right)/2)
         if arr[mid] == num:
             return mid
         if num > arr[mid]:
@@ -12,7 +12,7 @@ def binarySearch(arr, left, right, num):
 
 if __name__ == '__main__':
     arr = [1, 2, 3, 4, 5, 6, 7, 8]
-    num = 2
+    num = 6
     left = 0
-    right = (len(arr)-1)
-    print(binarySearch(arr, left, right, num))
+    right = len(arr)-1
+    print(binary_search(arr, left, right, num))
