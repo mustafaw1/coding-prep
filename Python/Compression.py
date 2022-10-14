@@ -1,16 +1,18 @@
-def isPalindrome(string):
-    n = len(string)
-    i = 0
-    count = 0
+def string_compression(string):
+    count = 1
     compressed = ''
     for i in range(len(string) - 1):
         if(string[i] == string[i + 1]):
-            count = count+1
+            count+=1
         else:
-            compressed = compressed + string[i] +  str(count)
-    print(compressed)
+            compressed+=string[i] + str(count)
+            count = 1
+    compressed+=string[i] + str(count)
+    return compressed        
+    
 
 
 if __name__ == "__main__":
     string = "wwwwaaadexxxxxxywww"
-    isPalindrome(string)
+    print(string_compression(string))
+    
