@@ -1,4 +1,4 @@
-package sortingPrep;
+package Java.Sorting;
 
 public class CheckSort {
     public static boolean checkSort(int[] arr) {

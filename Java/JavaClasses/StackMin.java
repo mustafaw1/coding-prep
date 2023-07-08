@@ -1,58 +1,58 @@
-package Classprep;
+package Java.JavaClasses;
 
 public class StackMin {
 
-    private Classprep.Stack MainStack;
-    private Classprep.Stack MinStack;
+    private Java.JavaClasses.Stack inputStack;
+    private Java.JavaClasses.Stack outputStack;
 
     public StackMin() {
-        MainStack = new Classprep.Stack(5);
-        MinStack = new Classprep.Stack(5);
+        inputStack = new Java.JavaClasses.Stack(5);
+        outputStack = new Java.JavaClasses.Stack(5);
     }
 
     public void push(int i)
     {     
-        MainStack.push(i);
-        if (MinStack.isEmpty()) {
-            MinStack.push(i);
+        inputStack.push(i);
+        if (outputStack.isEmpty()) {
+            outputStack.push(i);
         }
         else {
-            if (i <= MinStack.peek()) {
-                MinStack.push(i);
+            if (i <= outputStack.peek()) {
+                outputStack.push(i);
             }
         }
     }
 
     public int pop() {
-        int top = MainStack.pop();
-        if (top == MinStack.peek())
-            MinStack.pop();
+        int top = inputStack.pop();
+        if (top == outputStack.peek())
+            outputStack.pop();
         return top;
     }
 
     public int top() {
-        return MainStack.peek();
+        return inputStack.peek();
     }
 
     public int getSize() {
-        return MainStack.size;
+        return inputStack.size;
     }
 
     public boolean isEmpty() {
-        return MainStack.isEmpty();
+        return inputStack.isEmpty();
     }
 
     public int getMin(){
-        return MinStack.peek();
+        return outputStack.peek();
     }
 
     public static void main(String[] args) {
-        StackMin MainStack = new StackMin();
-        MainStack.push(7);
-        MainStack.push(8);
-        MainStack.push(9);
-        MainStack.push(5);
-        System.out.print(MainStack.getMin());
+        StackMin inputStack = new StackMin();
+        inputStack.push(7);
+        inputStack.push(8);
+        inputStack.push(9);
+        inputStack.push(5);
+        System.out.print(inputStack.getMin());
        
     }
 

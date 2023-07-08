@@ -1,4 +1,4 @@
-package recursionPrep;
+package Java.Recursion;
 
 public class ReverseArray {
 
@@ -18,7 +18,7 @@ public class ReverseArray {
      int [] arr = {12,4,6,8,9,2,1,0};
      int [] reversedArray= backWardArray(arr, 0, arr.length-1);
      for (int i = 0; i < reversedArray.length; i++) {
-        System.out.println(arr[i]);
+        System.out.print(arr[i]+ " ");
      }
  }
 

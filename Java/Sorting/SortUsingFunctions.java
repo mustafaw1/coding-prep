@@ -1,3 +1,4 @@
+package Java.Sorting;
 import java.util.Random;
 
 public class SortUsingFunctions {

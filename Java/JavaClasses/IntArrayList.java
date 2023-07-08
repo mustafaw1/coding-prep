@@ -1,4 +1,4 @@
-package Classprep;
+package Java.JavaClasses;
 
 public class IntArrayList {
     private static final int InitialCapacity = 20;
@@ -11,7 +11,6 @@ public class IntArrayList {
 
     public IntArrayList(int[] n) {
         Data = n;
-
     }
 
     public void addElement(int i) {
@@ -19,7 +18,7 @@ public class IntArrayList {
 
     }
 
-    public boolean containsElement(int element) {
+    public boolean containsElement(int element) {                                
         for (int i = 0; i < Data.length; i++) {
             if (element == Data[i])
                 return true;

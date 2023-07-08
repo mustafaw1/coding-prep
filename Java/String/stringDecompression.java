@@ -1,4 +1,4 @@
-package StringPrep;
+package Java.String;
 
 public class stringDecompression {
 

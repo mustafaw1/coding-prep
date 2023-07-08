@@ -1,4 +1,4 @@
-package recursionPrep;
+package Java.Recursion;
 
 public class BinarySearch {
     public static int binarySearchRecursive(int arr[], int left, int right, int num) {

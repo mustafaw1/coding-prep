@@ -1,22 +1,31 @@
-package sortingPrep;
+package Java.Sorting;
 
 public class sort0and1 {
-    public static String sortoneZero(String str) {
-        StringBuilder sb = new StringBuilder(str);
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == '1')
-                sb.append(str.charAt(i));
-            else if(str.charAt(i) == '0')
-                sb.insert(0, str.charAt(i));
+    public static int[] sortzeroandOne(int[] arr) {
+        int i = 0;
+        int j = arr.length -1;
+        while(i < j){
+            if(arr[i] == 1){
+                if(arr[j] == 0){
+                    arr[i] = 0;
+                    arr[j] = 1;
+                }
+                j--;
+            }
+            else{
+                i++;
+            }
         }
-        return sb.toString();
-
+        return arr;
     }
-
     public static void main(String[] args) {
-        String str = "01011010000";
-        System.out.print(sortoneZero(str));
-       
+        int[] arr = { 0, 0, 1, 1, 0, 1, 1, 0 };
+        sortzeroandOne(arr);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+            
+        }
+
     }
 
 }

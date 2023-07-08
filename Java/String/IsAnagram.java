@@ -1,4 +1,4 @@
-package StringPrep;
+package Java.String;
 
 import java.util.ArrayList;
 import java.util.Arrays;

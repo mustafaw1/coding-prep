@@ -1,4 +1,4 @@
-package Checkpalindrome;
+package Java.Checkpalindrome;
 
 public class generateFrompalindrome {
     public static Boolean checkGenfromPalindrome(String str) {

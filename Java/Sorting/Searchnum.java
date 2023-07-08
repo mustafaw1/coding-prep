@@ -1,4 +1,4 @@
-package Sorting;
+package Java.Sorting;
 
 class Searchnum {
 

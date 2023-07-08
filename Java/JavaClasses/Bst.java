@@ -19,16 +19,17 @@ class Bst
    
     public boolean identicalTrees(Node p, Node q)
     {
-        if (p == null && q == null){
-         return true;
+        if(p == null || p == null){
+            return false;
         }
-            
-        identicalTrees(p.left, q.left);
-        identicalTrees(q.right, q.right);
-        if(p.data == q.data && p.left == q.left && p.right == q.right)
-           return true;
-  
-        return false;
+        if(p == null && q == null){
+            return true;
+        }
+        return (p.data == q.data) && identicalTrees(p.left, q.left) && identicalTrees(p.right, q.right);
+    }
+
+    public boolean identicalTrees(){
+        return identicalTrees();
     }
   
    
@@ -47,6 +48,8 @@ class Bst
         tree.root2.right = new Node(3);
         tree.root2.left.left = new Node(4);
         tree.root2.left.right = new Node(5);
+
+        System.out.print(identicalTrees)
   
        
   

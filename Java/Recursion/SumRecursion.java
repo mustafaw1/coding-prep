@@ -1,4 +1,4 @@
-package recursionPrep;
+package Java.Recursion;
 
 public class SumRecursion {
     public static int sumRecursion(int[] arr, int i) {

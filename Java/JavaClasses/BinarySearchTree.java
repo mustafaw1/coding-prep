@@ -1,4 +1,4 @@
-package JavaClasses;
+package Java.JavaClasses;
 
 import java.util.ArrayList;
 
@@ -30,35 +30,34 @@ class BST_class {
             root.right = insertRecursive(root.right, data);
         return root;
     }
-    
-    
 
     public void insert(int data) {
         root = insertRecursive(root, data);
     }
 
-    // private Node delete_Recursive(Node root, int data) {
-    // if (root == null)
-    // return root;
+    private Node delete_Recursive(Node root, int data) {
+        if (root == null)
+            return root;
 
-    // if (data < root.data)
-    // root.left = delete_Recursive(root.left, data);
-    // else if (data > root.data)
-    // root.right = delete_Recursive(root.right, data);
+        if (data < root.data)
+            root.left = delete_Recursive(root.left, data);
+        else if (data > root.data)
+            root.right = delete_Recursive(root.right, data);
 
-    // else//if root has only one child
-    // if(root.left == null)
-    // return root.right;
+        else// if root has only one child
+        if (root.left == null)
+            return root.right;
 
-    // else// if root has only one child
-    // if(root.right == null)
-    // return root.left;
-    // else//if root has two child
-    // root.data = findMin(root.right);
-    // root.right = delete_Recursive(root.right, data);
+        else// if root has only one child
+        if (root.right == null)
+            return root.left;
+        else// if root has two child
+            root.data = findMin(root.right);
+        root.right = delete_Recursive(root.right, data);
 
-    // return root;
-    // }
+        return root;
+    }
+
     private Node findMin(Node start) {
 
         Node smallest = start;
@@ -153,6 +152,29 @@ class BST_class {
         return 0;
     }
 
+    
+    private int sumleftLeafInner(Node root){
+        int leftleafSum = 0;
+        if(root != null){
+            if(isLeftLeaf(root.left)){
+                leftleafSum += root.left.data ;
+            }
+            sumleftLeafInner(root.left);
+            sumleftLeafInner(root.right);
+        }
+        return 0;
+    }
+    public boolean isLeftLeaf(Node root){
+        if(root.left == null && root.right == null){
+            return true;
+        }
+        return false;
+    }
+    public int sumLeftLeaf(){
+        return sumleftLeafInner(this.root);
+
+    }
+
     public int sumLeaf() {
         return sumLeafInner(root);
 
@@ -228,38 +250,100 @@ class BST_class {
         return preOrder(root);
     }
 
-    private int maxDepthInner(Node root){
-        if(root == null)
-           return 0;
-        int left = maxDepthInner(root.left);
-        int right = maxDepthInner(root.right);
+    public int height(Node root) {
+        if (root == null)
+            return 0;
+        int left = height(root.left);
+        int right = height(root.right);
 
-        if(right > left){
-            return left + 1;
-        }
-        else{
-            return right + 1;
-        }
-    }
-    public int getmaxDepth(){
-        return maxDepthInner(root);
+        int maximumdepth = Math.max(left, right);
+        return 1 + maximumdepth;
     }
 
-    
- 
+    private int diameterOfBinaryTreeInner(Node root) {
+        if (root == null)
+            return 0;
+
+        int diameter1 = diameterOfBinaryTreeInner(root.left);
+        int diameter2 = diameterOfBinaryTreeInner(root.right);
+        int diameter3 = height(root.left) + height(root.right) + 1;
+
+        return Math.max(diameter3, Math.max(diameter1, diameter2));
+
+    }
+
+    public int diameterOfBinaryTree() {
+        return diameterOfBinaryTreeInner(root);
+    }
+
+    private boolean isBalancedInner(Node root) {
+        if (root == null) {
+            return true;
+        }
+        if (Math.abs(height(root.left) - height(root.right)) > 1) {
+            return false;
+        }
+        return isBalancedInner(root.left) && isBalancedInner(root.right);
+
+    }
+
+    public boolean isBalanced() {
+        return isBalancedInner(root);
+    }
+
+    private boolean hasPathSumInner(Node root, int targetsum) {
+        if (root == null) {
+            return false;
+        }
+        if (root.left == null && root.right == null) {
+            if (targetsum - root.data == 0) {
+                return true;
+            }
+        }
+        return hasPathSumInner(root.left, targetsum - root.data) || hasPathSumInner(root.right, targetsum - root.data);
+
+    }
+
+    public boolean hasPathSum() {
+        return hasPathSumInner(root, 22669876);
+    }
+
+    private int countNodes(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = countNodes(root.left);
+        int right = countNodes(root.right);
+
+        return left + right + root.data;
+    }
+
+    public int count() {
+        return countNodes(root);
+    }
+    public static void maxminProduct(Node root){
+        if(root == null){
+            return;
+        }
+        maxminProduct(root.left);
+        System.out.print(" "+ root.data * root.data);
+        maxminProduct(root.right);
+    }
+    public static void maxminProduct(){
+          maxminProductInner(this.root);
+    }
 
     //  (10)
-    // /   \
-//   (4)   (12)
-//   / \    /  \
-// (3) (7) (11) (24)
-    //            \
-    //           (25)
+    //  /   \
+    // (4)  (12)
+    // / \   / \
+ // (3) (7) (11) (24)
+      //          \
+    //             (25)
 
     public static void main(String[] args) {
         BST_class btree = new BST_class();
 
-        
         btree.insert(10);
         btree.insert(4);
         btree.insert(3);
@@ -268,12 +352,8 @@ class BST_class {
         btree.insert(11);
         btree.insert(24);
         btree.insert(25);
-        System.out.print(btree.getmaxDepth());
-
-
+        btree.maxminProduct();;
 
     }
 
 }
-
-

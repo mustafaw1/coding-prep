@@ -1,4 +1,4 @@
-package Classprep;
+package Java.JavaClasses;
 
 class Node<T> {
     public T data;

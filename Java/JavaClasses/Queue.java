@@ -1,4 +1,4 @@
-package Classprep;
+package Java.JavaClasses;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package sortingPrep;
+package Java.Sorting;
 
 public class sortzeroandone2 {
     public static int[] sort0and1(int[] arr) {

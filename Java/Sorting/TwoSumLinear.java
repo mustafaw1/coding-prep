@@ -1,22 +1,20 @@
-package Sorting;
+package Java.Sorting;
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.HashMap;
+
 
 public class TwoSumLinear {
     public static int[] twoSum(int arr[], int target) {
-        HashSet<Integer> set = new HashSet<Integer>();
+        HashMap<Integer, Integer> indexes = new HashMap<>();
         int[] result = {};
-        for (int i = 0; i < arr.length; i++) {
-            int temp = target - arr[i];
-            if (set.contains(temp)) {
+        for (int i = 0; i < arr.length; i++){
+            int temp = indexes.getOrDefault(target - arr[i], -1);
+            if (temp > -1) {                
                 result = new int[2];
-                result[0] = arr[i];
-                result[1] = temp;
-
+                result[0] = temp;
+                result[1] = i;
             }
-
-            set.add(arr[i]);
-
+            indexes.put(arr[i], i);
         }
         return result;
 
@@ -24,7 +22,7 @@ public class TwoSumLinear {
 
     public static void main(String[] args) {
         int[] arr = { 2, 10, 9, 12, 8, 24 };
-        int target = 12;
+        int target = 20;
         System.out.println(Arrays.toString(twoSum(arr, target)));
 
     }

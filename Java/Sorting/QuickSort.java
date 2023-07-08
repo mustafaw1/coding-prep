@@ -1,4 +1,4 @@
-package sortingPrep;
+package Java.Sorting;
 
 public class QuickSort {
     public static void swap(int[] arr, int i, int j)
